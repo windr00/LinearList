@@ -4,7 +4,8 @@
 
 #ifndef CPPTEST_ARRAYLISTOPERATOR_H
 #define CPPTEST_ARRAYLISTOPERATOR_H
-#include "List.hpp"
+
+#include "../Interface/List.hpp"
 
 
 template<class T>

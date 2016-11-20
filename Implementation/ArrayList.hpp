@@ -6,10 +6,13 @@
 #define CPPTEST_ARRAYLIST_H
 
 
-#include "List.hpp"
+#include "../Interface/List.hpp"
 #include <iostream>
 #include <cstdlib>
 #include <cstring>
+
+
+//template class definition
 template<class T>
 class ArrayList : public List<T> {
 public:
@@ -38,10 +41,25 @@ public:
 
     void Init() override;
 
+private:
+
+
+    T *array;
+
+
 protected:
+
+
     unsigned int count = 0;
 
 };
+
+
+
+
+
+//Implementations
+
 
 template <class T>
 unsigned ArrayList<T>::GetLength() {
@@ -87,7 +105,9 @@ void ArrayList<T>::InsertItem(T e, unsigned i) {
 	if (i <= count && count == this->length) {
 		T * temp = new T[this->length + 1];
 		memset(temp, 0, sizeof(T) * (this->length + 1));
-		memcpy(temp, this->array, i * sizeof(T));
+        for (int j = 0; j < i; j++) {
+            *(temp + (j * sizeof(T))) = this->operator[](j);
+        }
 		*(temp + (i * sizeof(T))) = e;
 		for (; i<this->length; i++) {
 			*(temp + ((i + 1) * sizeof(T))) = this->operator[](i);

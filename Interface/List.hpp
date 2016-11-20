@@ -12,7 +12,6 @@ template<class T>
 class List {
 protected:
 
-    T * array;
 
     unsigned length = 0;
 
@@ -29,9 +28,9 @@ public:
 
     virtual T GetItem(unsigned i) = 0;
 
-    virtual int FindFirst(T e) = 0;
+    virtual int FindFirst(T e) = 0; // return -1 means find nothing
 
-    virtual int FindLast(T e) = 0;
+    virtual int FindLast(T e) = 0; // same as prv one
 
     virtual void InsertItem(T e, unsigned i) = 0;
 
