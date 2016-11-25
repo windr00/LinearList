@@ -17,7 +17,7 @@ template<class T>
 class ArrayList : public List<T> {
 public:
 
-    ArrayList(unsigned len) : List<T>(len) {}
+	ArrayList(unsigned len) : List<T>(), length(len) { }
 
     unsigned GetLength() override;
 
@@ -42,7 +42,7 @@ public:
     void Init() override;
 
 private:
-
+	unsigned length;
 
     T *array;
 

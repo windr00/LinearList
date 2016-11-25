@@ -35,7 +35,7 @@ private:
 
 public:
 
-    SingleLinkTable(int length) : List<T>(length) { }
+    SingleLinkTable() : List<T>() { }
 
     void Init() override;
 
@@ -43,7 +43,7 @@ public:
 
     T GetItem(unsigned i) override;
 
-    T operator[](unsigned i);
+    T &operator[](unsigned i);
 
     int FindFirst(T e) override;
 
@@ -68,12 +68,7 @@ public:
 template<class T>
 void SingleLinkTable<T>::Init() {
     head = new node;
-    nodePtr temp = head;
-    for (int i = 0; i < this->length; i++) {
-        temp->next = new node;
-        temp = temp->next;
-    }
-    temp = nullptr;
+    head->next = nullptr;
 }
 
 template<class T>
@@ -96,7 +91,7 @@ T SingleLinkTable<T>::GetItem(unsigned i) {
 
 template<class T>
 
-T SingleLinkTable<T>::operator[](unsigned i) {
+T &SingleLinkTable<T>::operator[](unsigned i) {
     return this->operator+(i)->data;
 }
 

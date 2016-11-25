@@ -1,21 +1,17 @@
-//
-// Created by 冉惟之 on 2016/11/20.
-//
+#include "SingleLinkTable.hpp"
 
-#ifndef CPPTEST_STACK_HPP
-#define CPPTEST_STACK_HPP
-
-#include "../Interface/List.hpp"
+#ifndef _STACK_HPP_
+#define _STACK_HPP_
 
 template<class T>
+class Stack : public SingleLinkTable {
+private:
 
-class Stack : public List<T> {
 
 public:
 
-    Stack(unsigned length) : List<T>(length) { }
 
 };
 
 
-#endif //CPPTEST_STACK_HPP
+#endif

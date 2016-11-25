@@ -10,14 +10,6 @@
 
 template<class T>
 class List {
-protected:
-
-
-    unsigned length = 0;
-
-    List(unsigned length) {
-        this->length = length;
-    }
 
 
 public:

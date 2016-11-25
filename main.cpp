@@ -17,9 +17,8 @@ int main() {
 //
 //    std::cout<<LocateElem(list, 2)<<std::endl;
 
-    SingleLinkTable<const char *> *slt = new SingleLinkTable<const char *>(1);
 
-    SingleLinkTable<const char *> &table = *slt;
+    SingleLinkTable<const char *> &table = *new SingleLinkTable<const char *>();
 
     InitList<const char *>(table);
 
@@ -31,6 +30,7 @@ int main() {
 
     ListInsert<const char *>(table, 3, "Lala");
 
+    table[3] = "Papa";
 
     PrintList<const char *>(table);
 
