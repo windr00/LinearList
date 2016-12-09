@@ -1,5 +1,6 @@
-#include "Operator/ArrayListOperator.hpp"
+#include "Operator/ListOperator.hpp"
 #include "Implementation/SingleLinkTable.hpp"
+#include "Implementation/ArrayList.hpp"
 
 int main() {
 //    ArrayList<int> * arrayList = new ArrayList<int>(1);
@@ -18,27 +19,59 @@ int main() {
 //    std::cout<<LocateElem(list, 2)<<std::endl;
 
 
-    SingleLinkTable<const char *> &table = *new SingleLinkTable<const char *>();
+//    SingleLinkTable<const char *> &table = *new SingleLinkTable<const char *>();
+//
+//    InitList<const char *>(table);
+//
+//    ListInsert<const char *>(table, 0, "Hello");
+//
+//    ListInsert<const char *>(table, 1, "World");
+//
+//    ListInsert<const char *>(table, 1, "Haha");
+//
+//    ListInsert<const char *>(table, 3, "Lala");
+//
+//    table[3] = "Papa";
+//
+//    PrintList<const char *>(table);
+//
+//    ListDelete<const char *>(table, 1);
+//
+//    PrintList<const char *>(table);
+//
+//    DestroyList<const char *>(table);
 
-    InitList<const char *>(table);
+    SingleLinkTable<ArrayList<int> *> &table = *new SingleLinkTable<ArrayList<int> *>();
 
-    ListInsert<const char *>(table, 0, "Hello");
+    InitList<ArrayList<int> *>(table);
 
-    ListInsert<const char *>(table, 1, "World");
+    ArrayList<int> &list1 = *new ArrayList<int>(2);
 
-    ListInsert<const char *>(table, 1, "Haha");
+    InitList<int>(list1);
 
-    ListInsert<const char *>(table, 3, "Lala");
+    ListInsert<int>(list1, 0, 1);
 
-    table[3] = "Papa";
+    ListInsert<int>(list1, 1, 2);
 
-    PrintList<const char *>(table);
+    ArrayList<int> &list2 = *new ArrayList<int>(2);
 
-    ListDelete<const char *>(table, 1);
+    InitList<int>(list2);
 
-    PrintList<const char *>(table);
+    ListInsert<int>(list2, 0, -1);
 
-    DestroyList<const char *>(table);
+    ListInsert<int>(list2, 0, -2);
+
+    ListInsert<ArrayList<int> *>(table, 0, &list1);
+
+    ListInsert<ArrayList<int> *>(table, 1, &list2);
+
+    PrintList<ArrayList<int> *>(table);
+//
+    PrintList<int>(*GetElem<ArrayList<int> *>(table, 0));
+    PrintList<int>(*GetElem<ArrayList<int> *>(table, 1));
+    PrintList<int>(list1);
+    PrintList<int>(list2);
+
 
     return 0;
 }

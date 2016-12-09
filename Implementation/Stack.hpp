@@ -4,11 +4,16 @@
 #define _STACK_HPP_
 
 template<class T>
-class Stack : public SingleLinkTable {
+class Stack {
 private:
 
+    List<T> &list;
 
 public:
+
+    Stack(List<T> &list) : list(list) {}
+
+
 
 
 };

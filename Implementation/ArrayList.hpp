@@ -76,7 +76,7 @@ T ArrayList<T>::GetItem(unsigned i) {
 
 template <class T>
 T &ArrayList<T>::operator[](unsigned i) {
-	return *(this->array + (i * sizeof(T)));
+    return array[i];
 }
 
 template <class T>
@@ -106,11 +106,11 @@ void ArrayList<T>::InsertItem(T e, unsigned i) {
 		T * temp = new T[this->length + 1];
 		memset(temp, 0, sizeof(T) * (this->length + 1));
         for (int j = 0; j < i; j++) {
-            *(temp + (j * sizeof(T))) = this->operator[](j);
+            temp[j] = array[j];
         }
-		*(temp + (i * sizeof(T))) = e;
+        temp[i] = e;
 		for (; i<this->length; i++) {
-			*(temp + ((i + 1) * sizeof(T))) = this->operator[](i);
+            temp[i + 1] = array[i];
 		}
 		delete this->array;
 		this->array = temp;
@@ -118,10 +118,12 @@ void ArrayList<T>::InsertItem(T e, unsigned i) {
 		count++;
 	}
 	else if (i <= count && count < this->length) {
-		for (unsigned j = count - 1; j > i - 1; j--) {
-			this->operator[](j + 1) = this->operator[](j);
+        for (int j = count - 1;
+             j > (((int) i) - 1);
+             j--) {
+            array[j + 1] = array[j];
 		}
-		this->operator[](i) = e;
+        array[i] = e;
 		count++;
 	}
 	else {

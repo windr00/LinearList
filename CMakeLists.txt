@@ -8,6 +8,6 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES Interface/List.hpp
         Implementation/ArrayList.hpp
-        Operator/ArrayListOperator.hpp
-        main.cpp Implementation/SingleLinkTable.hpp Implementation/Stack.hpp Implementation/Queue.hpp)
+        Operator/ListOperator.hpp
+        main.cpp Implementation/SingleLinkTable.hpp Implementation/Stack.hpp Implementation/Queue.hpp Algorithm/Search/Search.hpp Implementation/OrderedList.hpp)
 add_executable(cpptest ${SOURCE_FILES})
