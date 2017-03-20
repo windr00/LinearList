@@ -60,15 +60,15 @@ include CMakeFiles/cpptest.dir/flags.make
 CMakeFiles/cpptest.dir/main.cpp.o: CMakeFiles/cpptest.dir/flags.make
 CMakeFiles/cpptest.dir/main.cpp.o: ../main.cpp
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/Users/windr/Desktop/LinearList/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cpptest.dir/main.cpp.o"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpptest.dir/main.cpp.o -c /Users/windr/Desktop/LinearList/main.cpp
+	/Library/Developer/CommandLineTools/usr/bin/c++   $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/cpptest.dir/main.cpp.o -c /Users/windr/Desktop/LinearList/main.cpp
 
 CMakeFiles/cpptest.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cpptest.dir/main.cpp.i"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/windr/Desktop/LinearList/main.cpp > CMakeFiles/cpptest.dir/main.cpp.i
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/windr/Desktop/LinearList/main.cpp > CMakeFiles/cpptest.dir/main.cpp.i
 
 CMakeFiles/cpptest.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cpptest.dir/main.cpp.s"
-	/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/windr/Desktop/LinearList/main.cpp -o CMakeFiles/cpptest.dir/main.cpp.s
+	/Library/Developer/CommandLineTools/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/windr/Desktop/LinearList/main.cpp -o CMakeFiles/cpptest.dir/main.cpp.s
 
 CMakeFiles/cpptest.dir/main.cpp.o.requires:
 

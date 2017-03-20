@@ -16,6 +16,10 @@ cstdlib
 zconf.h
 -
 
+/Users/windr/Desktop/LinearList/Algorithm/Sort/Sort.h
+cstdlib
+-
+
 /Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
 ../Interface/List.hpp
 /Users/windr/Desktop/LinearList/Interface/List.hpp
@@ -53,4 +57,6 @@ Implementation/ArrayList.hpp
 /Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
 Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
 /Users/windr/Desktop/LinearList/Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
+Algorithm/Sort/Sort.h
+/Users/windr/Desktop/LinearList/Algorithm/Sort/Sort.h
 

@@ -2,6 +2,7 @@
 #include "Implementation/SingleLinkTable.hpp"
 #include "Implementation/ArrayList.hpp"
 #include "Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp"
+#include "Algorithm/Sort/Sort.h"
 int main() {
 //    ArrayList<int> * arrayList = new ArrayList<int>(1);
 //    ArrayList<int> & list = * arrayList;
@@ -72,8 +73,36 @@ int main() {
 //    PrintList<int>(list1);
 //    PrintList<int>(list2);
 
+    int arr[] = {1,45,-1,98,100,34,65,65,87,0};
 
-    InitThreads();
+    select_sort(arr, 10);
 
+    for (int i = 0;i < 10;i ++) {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
+
+    bubble_sort(arr, 10);
+
+    for (int i = 0;i < 10;i ++) {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
+
+
+    quick_sort(arr, 10);
+
+    for (int i = 0;i < 10;i ++) {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
+
+
+    insert_sort(arr, 10);
+
+    for (int i = 0;i < 10;i ++) {
+        printf("%d\t", arr[i]);
+    }
+    printf("\n");
     return 0;
 }
