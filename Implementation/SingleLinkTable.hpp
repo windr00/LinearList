@@ -28,7 +28,7 @@ private:
     unsigned count = 0;
 
     nodePtr operator+(unsigned i) {
-        nodePtr temp = head;
+        nodePtr temp = head->next;
         for (int j = 0; j < i; ++j, temp = temp->next) { }
         return temp;
     }
@@ -128,7 +128,12 @@ template<class T>
 void SingleLinkTable<T>::InsertItem(T e, unsigned i) {
     nodePtr temp;
     if (i < count) {
-        temp = this->operator+(i - 1);
+        if(i == 0) {
+            temp = head;
+        }
+        else {
+            temp = this->operator+(i - 1);
+        }
         if (temp->next == nullptr) {
             temp->next = new node;
             temp->next->data = e;
@@ -148,7 +153,7 @@ void SingleLinkTable<T>::InsertItem(T e, unsigned i) {
             temp = new node;
             temp->data = e;
             temp->next = head->next;
-            head = temp;
+            head->next = temp;
         }
         else {
             temp = this->operator+(count - 1);
@@ -167,9 +172,9 @@ template<class T>
 T SingleLinkTable<T>::DeleteItem(unsigned i) {
     if (i < count) {
         T ret;
-        nodePtr temp = head;
+        nodePtr temp = head->next;
         if (i == 0) {
-            head = head->next;
+            head->next = temp->next;
             ret = temp->data;
             delete temp;
             count--;
@@ -189,7 +194,7 @@ T SingleLinkTable<T>::DeleteItem(unsigned i) {
 
 template<class T>
 void SingleLinkTable<T>::Print() {
-    nodePtr temp = head;
+    nodePtr temp = head->next;
     for (int i = 0; i < count; i++, temp = temp->next) {
         std::cout << temp->data << " ";
     }
@@ -203,12 +208,14 @@ bool SingleLinkTable<T>::Empty() {
 
 template<class T>
 void SingleLinkTable<T>::Dispose() {
-    while (head->next != nullptr) {
-        nodePtr del = head->next;
-        head->next = del->next;
-        delete del;
+    if (head != nullptr) {
+        while (head->next != nullptr) {
+            nodePtr del = head->next;
+            head->next = del->next;
+            delete del;
+        }
+        delete head;
     }
-    delete head;
 }
 
 

@@ -30,6 +30,14 @@ cstdlib
 cstring
 -
 
+/Users/windr/Desktop/LinearList/Implementation/Queue.hpp
+../Interface/List.hpp
+/Users/windr/Desktop/LinearList/Interface/List.hpp
+ArrayList.hpp
+/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
+SingleLinkTable.hpp
+/Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
+
 /Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
 exception
 -
@@ -37,6 +45,12 @@ iostream
 -
 ../Interface/List.hpp
 /Users/windr/Desktop/LinearList/Interface/List.hpp
+
+/Users/windr/Desktop/LinearList/Implementation/Stack.hpp
+SingleLinkTable.hpp
+/Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
+ArrayList.hpp
+/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
 
 /Users/windr/Desktop/LinearList/Interface/List.hpp
 cstdlib
@@ -59,4 +73,8 @@ Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
 /Users/windr/Desktop/LinearList/Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
 Algorithm/Sort/Sort.h
 /Users/windr/Desktop/LinearList/Algorithm/Sort/Sort.h
+Implementation/Stack.hpp
+/Users/windr/Desktop/LinearList/Implementation/Stack.hpp
+Implementation/Queue.hpp
+/Users/windr/Desktop/LinearList/Implementation/Queue.hpp
 

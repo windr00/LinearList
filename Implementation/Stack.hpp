@@ -1,35 +1,47 @@
 #include "SingleLinkTable.hpp"
+#include "ArrayList.hpp"
+
 #ifndef _STACK_HPP_
 #define _STACK_HPP_
 
 template<class T>
-class Stack {
+class Stack{
 private:
 
-    List<T> &list;
+    SingleLinkTable<T> * list;
 
 public:
 
-    Stack(List<T> &list) : list(list) {
-        list.Init();
+    Stack()  {
+        list = new SingleLinkTable<T>();
+        list->Init();
     }
 
 
     void Push(T e) {
-        list.InsertItem(e, list.GetLength() - 1);
+        list->InsertItem(e, 0);
     }
 
     T Pop() {
-      return list.DeleteItem(list.GetLength() - 1);
+      return list->DeleteItem(0);
     }
 
     void Clear() {
-        list.Dispose();
-        list.Init();
+        list->Dispose();
+        list->Init();
     }
 
     T Top() {
-        return list.GetItem(list.GetLength() - 1);
+        return list->GetItem(0);
+    }
+
+    bool Empty() {
+        return list->Empty();
+    }
+
+    ~Stack(){
+        list->Dispose();
+        delete list;
     }
 
 };

@@ -4,7 +4,9 @@
 CMakeFiles/cpptest.dir/main.cpp.o: ../Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Algorithm/Sort/Sort.h
 CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/ArrayList.hpp
+CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/Queue.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/SingleLinkTable.hpp
+CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/Stack.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Interface/List.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Operator/ListOperator.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../main.cpp
