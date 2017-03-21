@@ -46,7 +46,7 @@ public:
     }
 
     void RestoreTree(List<T> & pre_order, List<T> &in_order) {
-        
+
     }
 
 };
