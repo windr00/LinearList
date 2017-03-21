@@ -99,6 +99,9 @@
 		<Unit filename="/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp">
 			<Option target="cpptest"/>
 		</Unit>
+		<Unit filename="/Users/windr/Desktop/LinearList/Implementation/BinaryTree.hpp">
+			<Option target="cpptest"/>
+		</Unit>
 		<Unit filename="/Users/windr/Desktop/LinearList/Implementation/OrderedList.hpp">
 			<Option target="cpptest"/>
 		</Unit>
