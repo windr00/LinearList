@@ -1,6 +1,5 @@
 
 #include "Implementation/SingleLinkTable.hpp"
-#include "Algorithm/Sort/Sort.h"
 
 #include "TestSet.h"
 
@@ -95,7 +94,10 @@ int main() {
 
 
 //
-    sort_test(array, length, quick_sort);
+    //sort_test(array, length, quick_sort);
+    qsort(array, length, sizeof(int), [](const void *num1, const void *num2) {
+        return *((int *) num1) < *((int *) num2) ? 0 : 1;
+    });
 
 
 //    Stack<int> s ;
