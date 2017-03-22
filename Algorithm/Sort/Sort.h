@@ -38,6 +38,8 @@ static bool handle_short_array(T *array, int length) {
 template <class T>
 void bubble_sort(T * array, int length) {
     int flag = 0;
+    int round = 0;
+    printf("bubble round: \n");
     for (int i =0; i < length;i++) {
         for (int j = 1;j < length;j++) {
             if(*(array + j) < *(array + j - 1)) {
@@ -45,7 +47,9 @@ void bubble_sort(T * array, int length) {
                 swap(array + j, array + j -1);
             }
         }
-
+        round++;
+        printf("\r%d", round);
+        fflush(stdout);
         if(!flag) {
             return;
         }
@@ -86,9 +90,13 @@ static int partition(T * array, int length) {
 
 template <class T>
 void quick_sort(T * array, int length) {
+    static int round = 0;
     if (handle_short_array(array, length)) {
         return;
     }
+
+    round++;
+    printf("\r%d", round);
     int pivot = partition(array, length);
     quick_sort(array, pivot);
     quick_sort(array + pivot + 1, length - pivot - 1);

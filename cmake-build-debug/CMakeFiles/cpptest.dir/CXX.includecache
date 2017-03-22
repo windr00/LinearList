@@ -6,37 +6,9 @@
 
 #IncludeRegexTransform: 
 
-/Users/windr/Desktop/LinearList/Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
-pthread.h
--
-iostream
--
-cstdlib
--
-zconf.h
--
-
 /Users/windr/Desktop/LinearList/Algorithm/Sort/Sort.h
 cstdlib
 -
-
-/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
-../Interface/List.hpp
-/Users/windr/Desktop/LinearList/Interface/List.hpp
-iostream
--
-cstdlib
--
-cstring
--
-
-/Users/windr/Desktop/LinearList/Implementation/Queue.hpp
-../Interface/List.hpp
-/Users/windr/Desktop/LinearList/Interface/List.hpp
-ArrayList.hpp
-/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
-SingleLinkTable.hpp
-/Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
 
 /Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
 exception
@@ -46,39 +18,19 @@ iostream
 ../Interface/List.hpp
 /Users/windr/Desktop/LinearList/Interface/List.hpp
 
-/Users/windr/Desktop/LinearList/Implementation/Stack.hpp
-SingleLinkTable.hpp
-/Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
-ArrayList.hpp
-/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
-
 /Users/windr/Desktop/LinearList/Interface/List.hpp
 cstdlib
 -
 cstring
 -
 
-/Users/windr/Desktop/LinearList/Operator/ListOperator.hpp
-../Interface/List.hpp
-/Users/windr/Desktop/LinearList/Interface/List.hpp
-
 /Users/windr/Desktop/LinearList/TestSet.h
 
 /Users/windr/Desktop/LinearList/main.cpp
-Operator/ListOperator.hpp
-/Users/windr/Desktop/LinearList/Operator/ListOperator.hpp
 Implementation/SingleLinkTable.hpp
 /Users/windr/Desktop/LinearList/Implementation/SingleLinkTable.hpp
-Implementation/ArrayList.hpp
-/Users/windr/Desktop/LinearList/Implementation/ArrayList.hpp
-Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
-/Users/windr/Desktop/LinearList/Algorithm/Peterson's_Algorithm/PetersonAlgorithm.hpp
 Algorithm/Sort/Sort.h
 /Users/windr/Desktop/LinearList/Algorithm/Sort/Sort.h
-Implementation/Stack.hpp
-/Users/windr/Desktop/LinearList/Implementation/Stack.hpp
-Implementation/Queue.hpp
-/Users/windr/Desktop/LinearList/Implementation/Queue.hpp
 TestSet.h
 /Users/windr/Desktop/LinearList/TestSet.h
 
