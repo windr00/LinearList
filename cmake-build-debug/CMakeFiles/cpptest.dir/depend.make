@@ -9,5 +9,6 @@ CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/SingleLinkTable.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Implementation/Stack.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Interface/List.hpp
 CMakeFiles/cpptest.dir/main.cpp.o: ../Operator/ListOperator.hpp
+CMakeFiles/cpptest.dir/main.cpp.o: ../TestSet.h
 CMakeFiles/cpptest.dir/main.cpp.o: ../main.cpp
 

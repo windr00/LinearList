@@ -8,40 +8,40 @@ template<class T>
 class Stack{
 private:
 
-    SingleLinkTable<T> * list;
+    SingleLinkTable<T> *container;
 
 public:
 
     Stack()  {
-        list = new SingleLinkTable<T>();
-        list->Init();
+        container = new SingleLinkTable<T>();
+        container->Init();
     }
 
 
     void Push(T e) {
-        list->InsertItem(e, 0);
+        container->InsertItem(e, 0);
     }
 
     T Pop() {
-      return list->DeleteItem(0);
+        return container->DeleteItem(0);
     }
 
     void Clear() {
-        list->Dispose();
-        list->Init();
+        container->Dispose();
+        container->Init();
     }
 
     T Top() {
-        return list->GetItem(0);
+        return container->GetItem(0);
     }
 
     bool Empty() {
-        return list->Empty();
+        return container->Empty();
     }
 
     ~Stack(){
-        list->Dispose();
-        delete list;
+        container->Dispose();
+        delete container;
     }
 
 };

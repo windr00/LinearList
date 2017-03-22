@@ -34,6 +34,8 @@ public:
 
     virtual void Dispose() = 0;
 
+    virtual T *ToArray() = 0;
+
 
 };
 

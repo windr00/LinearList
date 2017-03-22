@@ -14,6 +14,26 @@ static void swap(T * value1, T * value2) {
     * value2 = temp;
 }
 
+template<class T>
+
+static bool handle_short_array(T *array, int length) {
+
+    switch (length) {
+        case 0:
+        case 1: {
+            return true;
+        }
+        case 2: {
+            if (array[0] > array[1]) {
+                swap(array + 0, array + 1);
+            }
+            return true;
+        }
+        default: {
+            return false;
+        }
+    }
+}
 
 template <class T>
 void bubble_sort(T * array, int length) {
@@ -66,7 +86,7 @@ static int partition(T * array, int length) {
 
 template <class T>
 void quick_sort(T * array, int length) {
-    if (length == 0) {
+    if (handle_short_array(array, length)) {
         return;
     }
     int pivot = partition(array, length);
@@ -76,6 +96,9 @@ void quick_sort(T * array, int length) {
 
 template <class T>
 void select_sort(T * array, int length) {
+    if (handle_short_array(array, length)) {
+        return;
+    }
     int flag = 0;
     for (int i = 0;i < length;i++) {
         int min = i;
@@ -93,6 +116,9 @@ void select_sort(T * array, int length) {
 
 template <class T>
 void insert_sort(T * array, int length) {
+    if (handle_short_array(array, length)) {
+        return;
+    }
     SingleLinkTable<T>  temp;
     temp.Init();
     temp.InsertItem(array[0], 0);
@@ -101,6 +127,7 @@ void insert_sort(T * array, int length) {
         for (unsigned int j = 0;j < temp.GetLength();j++) {
             if (temp.GetItem(j) > array[i]) {
                 max_pos = j;
+                break;
             }
         }
         temp.InsertItem(array[i], max_pos);
@@ -108,6 +135,39 @@ void insert_sort(T * array, int length) {
 
     for (int i = 0;i < length;i++) {
         array[i] = temp[i];
+    }
+}
+
+template<class T>
+
+void shell_sort(T *array, int length) {
+    if (handle_short_array(array, length)) {
+        return;
+    }
+    int d = length * 8 / 10;
+    SingleLinkTable<T> temp;
+    int indexes[length];
+    int sorted_length = 0;
+    T *t = nullptr;
+    while (d >= 1) {
+        temp.Init();
+        for (int i = 0; i < length; i += d) {
+            temp.InsertItem(array[i], temp.GetLength());
+            indexes[sorted_length++] = i;
+        }
+        t = temp.ToArray();
+        insert_sort(t, sorted_length);
+        for (int j = 0; j < sorted_length; j++) {
+            array[indexes[j]] = t[j];
+        }
+        sorted_length = 0;
+        if (d == 1) {
+            break;
+        }
+        d = (d - 2) >= 1 ? d - 2 : 1;
+        temp.Dispose();
+        temp.Init();
+        delete t;
     }
 }
 #endif //CPPTEST_SORT_H

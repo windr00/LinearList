@@ -46,6 +46,8 @@ private:
 
     T *array;
 
+public:
+    T *ToArray() override;
 
 protected:
 
@@ -170,6 +172,15 @@ void ArrayList<T>::Init() {
 template <class T>
 void ArrayList<T>::Dispose() {
 	delete this->array;
+}
+
+template<class T>
+T *ArrayList<T>::ToArray() {
+    T *ret = new T[this->GetLength()];
+    for (int i = 0; i < this->GetLength(); i++) {
+        ret[i] = this->array[i];
+    }
+    return ret;
 }
 
 #endif //CPPTEST_LIST_H

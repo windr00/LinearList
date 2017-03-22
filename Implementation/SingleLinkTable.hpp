@@ -59,7 +59,7 @@ public:
 
     void Dispose() override;
 
-
+    T *ToArray() override;
 };
 
 //class implementation
@@ -216,6 +216,16 @@ void SingleLinkTable<T>::Dispose() {
         }
         delete head;
     }
+    this->count = 0;
+}
+
+template<class T>
+T *SingleLinkTable<T>::ToArray() {
+    T *array = new T[this->GetLength()];
+    for (int i = 0; i < this->GetLength(); i++) {
+        array[i] = this->GetItem(i);
+    }
+    return array;
 }
 
 

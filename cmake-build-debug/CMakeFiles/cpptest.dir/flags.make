@@ -6,5 +6,5 @@ CXX_FLAGS =  -std=c++11 -g
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/local/opt/libxml2/include -I/usr/local/opt/boost/include 
+CXX_INCLUDES = 
 
